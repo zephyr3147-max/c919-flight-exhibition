@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="flight-profile" content="registered">
+  <link rel="icon" href="data:,">
+  <title>解构飞行——看见C919的骨架</title>
+  <link id="engineering-style" rel="stylesheet" href="./src/app/dev/shell.css">
+  <script type="importmap">{"imports":{"three":"./vendor/three.module.js","three/addons/":"./vendor/addons/"}}</script>
+</head>
+<body data-art="engineering" data-mode="loading">
+  <a class="skip" href="#controls">跳到操作区</a>
+  <main id="exhibit" aria-label="解构飞行自由探索">
+    <div id="stage"><canvas id="scene" aria-label="C919交互展览" tabindex="0"></canvas>
+      <section id="fallback" hidden aria-label="结构目录模式"><h2>结构目录模式</h2><p>三维场景暂不可用。</p><p id="fallback-current"></p></section>
+    </div>
+    <div id="art-mount"></div>
+    <section id="loading" role="status" aria-live="polite"><p id="load-message">正在准备运行库…</p><progress id="load-progress" max="3" value="0"></progress><button id="retry" hidden>重新加载</button></section>
+    <p id="notice" role="status" aria-live="polite"></p>
+  </main>
+  <noscript>交互场景暂不可用。</noscript>
+  <script type="module" src="./src/app/main.js"></script>
+</body>
+</html>
